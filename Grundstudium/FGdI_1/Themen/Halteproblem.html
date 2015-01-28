@@ -1,0 +1,126 @@
+<HTML>
+<HEAD>
+<TITLE>Scooping the Loop Snooper &mdash; Geoffrey K. Pullum</TITLE>
+</HEAD>
+<BODY bgcolor="#FFFFCC">
+<CENTER>
+<H1>SCOOPING THE LOOP SNOOPER</H1>
+
+<H2>A proof that the Halting Problem is undecidable</H2>
+
+<B>Geoffrey K. Pullum</B><br>
+(<I>School of Philosophy, Psychology and Language Sciences,
+   University of Edinburgh</I>)
+
+<P>&nbsp;
+<P><TABLE><TR><TD><I>No general procedure for bug checks will do.</I><br>
+Now, I won&rsquo;t just assert that, I&rsquo;ll prove it to you. <br>
+I will prove that although you might work till you drop, <br>
+you cannot tell if computation will stop.</TD></TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD>For imagine we have a procedure called <I>P</I> <br>
+that for specified input permits you to see<br>
+whether specified source code, with all of its faults,<br>
+defines a routine that eventually halts.</TD></TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD>You feed in your program, with suitable data, <br>
+and <I>P</I> gets to work, and a little while later <br>
+(in finite compute time) correctly infers<br>
+whether infinite looping behavior occurs.
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD>If there will be no looping, then <I>P</I> prints out &lsquo;Good.&rsquo;<br>
+That means work on this input will halt, as it should.<br>
+But if it detects an unstoppable loop,<br>
+then <I>P</I> reports &lsquo;Bad!&rsquo; &mdash; which means you&rsquo;re in the soup.
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD>Well, the truth is that <I>P</I> cannot possibly be, <br>
+because if you wrote it and gave it to me, <br>
+I could use it to set up a logical bind <br>
+that would shatter your reason and scramble your mind.
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD>Here&rsquo;s the trick that I&rsquo;ll use &mdash; and it&rsquo;s simple to do. <br>
+I&rsquo;ll define a procedure, which I will call <I>Q</I>,<br>
+that will use <I>P</I>&rsquo;s predictions of halting success  <br>
+to stir up a terrible logical mess.
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD>For a specified program, say <I>A</I>, one supplies,<br>
+the first step of this program called <I>Q</I> I devise<br>
+is to find out from <I>P</I> what&rsquo;s the right thing to say<br>
+of the looping behavior of <I>A</I> run on <I>A</I>.
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD>If <I>P</I>&rsquo;s answer is &lsquo;Bad!&rsquo;, <I>Q</I> will suddenly stop. <br>
+But otherwise, <I>Q</I> will go back to the top, <br>
+and start off again, looping endlessly back, <br>
+till the universe dies and turns frozen and black.
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD>And this program called <I>Q</I> wouldn&rsquo;t stay on the shelf; <br>
+I would ask it to forecast its run on <I>itself</I>.<br>
+When it reads its own source code, just what will it do? <br>
+What&rsquo;s the looping behavior of <I>Q</I> run on <I>Q</I>?
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD>If <I>P</I> warns of infinite loops, <I>Q</I> will quit; <br>
+yet <I>P</I> is supposed to speak truly of it! <br>
+And if <I>Q</I>&rsquo;s going to quit, then <I>P</I> should say &lsquo;Good.&rsquo;<br>
+Which makes <I>Q</I> start to loop!  (<I>P</I> denied that it would.)
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD>No matter how <I>P</I> might perform, <I>Q</I> will scoop it: <br>
+<I>Q</I> uses <I>P</I>&rsquo;s output to make <I>P</I> look stupid.<br>
+Whatever <I>P</I> says, it cannot predict <I>Q</I>: <br>
+<I>P</I> is right when it&rsquo;s wrong, and is false when it&rsquo;s true!
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD>I&rsquo;ve created a paradox, neat as can be &mdash;<br>
+and simply by using your putative <I>P</I>. <br>
+When you posited <I>P</I> you stepped into a snare; <br>
+Your assumption has led you right into my lair.
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD>So where can this argument possibly go? <br>
+I don&rsquo;t have to tell you; I&rsquo;m sure you must know. <br>
+A <I>reductio</I>:  There cannot possibly be <br>
+a procedure that acts like the mythical <I>P</I>.
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD>You can never find general mechanical means<br>
+for predicting the acts of computing machines; <br>
+it&rsquo;s something that cannot be done.  So we users <br>
+must find our own bugs.  Our computers are losers!
+</TD></TR></TABLE>
+</CENTER>
+<P>
+<P>
+<HR>
+<SMALL>
+In October 2000, after a refereeing delay of nearly a year, an
+earlier and incorrect version of this poetic proof was published
+in <I>Mathematics Magazine</I> (<B>73</B>, no. 4, 319&ndash;320).
+But it had an error.  I am very grateful to Philip Wadler (Informatics,
+University of Edinburgh) and Larry Moss (Mathematics, Indiana University)
+for helping with the development of this corrected version, which is
+now free of bugs (trust me; you can check it).  Thanks also to the late
+Dr.&nbsp;Seuss for the style, and of course to the pioneering work of
+Alan Turing (and Martin Davis&rsquo;s nice simplified presentation) for
+the content.
+I had the privilege of reading this aloud at a conference in honour of
+the memory of Alan Turing at Cambridge University in June 2012.
+Notice that reading it aloud works best in southern British standard
+English: the rhyme of the first two lines of the third stanza call for a
+non-rhotic dialect.
+Copyright &copy; 2008 by Geoffrey K. Pullum.  Permission is hereby
+granted to reproduce or distribute this work for non-commercial,
+educational purposes relating to the teaching of computer science,
+mathematics, or logic, provided this attribution is included.
+The same holds for the Ukrainian version which you can see if you
+<a href="http://coffeehealtheffects.com/cherpachaya">click here</a>,
+and the Czech version for which you can
+<a href="http://www.onlinecarparts.co.uk/science/?p=1017">click here</a>,
+and the Polish version for which you can
+<a href="http://www.autoteilexxl.de/edu/?p=66">click here</a>
+and the Russian version for which you can
+<a href="http://www.autoersatzteile.de/blog/%D0%BE%D0%B1%D0%B7%D0%BE%D1%80%D0%BD%D1%8B%D0%B9-%D1%86%D0%B8%D0%BA%D0%BB-snooper">click here</a>.
+(There was a Belorussian version too, at
+<A href="http://webhostinggeeks.com/science/gpullum-loopsnoop-be">this
+site</A>, but the link seems to be dead.)
+Poetic restatement of classic computability theory results seems to be
+<b>huge</b> in the Slavic world for some reason.
+</SMALL>
+
+</BODY>
+</HTML>
