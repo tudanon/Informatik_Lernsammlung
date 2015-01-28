@@ -1,0 +1,20 @@
+1. Datei: einfaches Beispiel zum Checken ohne Main, etc
+cbmc 1_module.c --function sum
+cbmc 1_module.c --function foo
+
+2. Datei: Beispiel zur simplen praktischen Anwendung
+cbmc 2_usage.c --show-vcc --bounds-check --pointer-check
+Inkl. Anzeige der Verifik. Bedingungen
+
+3. Datei: Loop unwinding
+cbmc 3_loop.c --function binsearch --unwind 6 --bounds-check
+Zur veranschaulichung von unwinding assertions kann das mit 4 als Parameter getestet werden
+
+4. Datei: Bubble Sort Example
+cbmc 4_example.c --function test
+Kann auch mit --unwind x getestet werden um Fehler bei zu wenig unwinding zu zeigen
+
+5. Datei: Quick Sort mit Fehler
+Korrekte Datei: _fix.c
+Fehlerhafte Datei bildet ein Insertion Sort ab, allerdings wurde ein Zwischenspeichern eines Vergleichswertes vergessen, wodurch es zu Inkosistenzen bei der Berechnung kommt
+cbmc 5_example.c --function test
